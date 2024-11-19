@@ -114,3 +114,24 @@ function hoopCount(n) {
     return "Keep at it until you get it";
   }
 }
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+function fakeBin(x) {
+  let list = x.split("");
+  let numList = list.map(Number);
+
+  let binList = [];
+  for (let i = 0; i < numList.length; i++) {
+    if (numList[i] >= 5) {
+      binList.push(1);
+    } else {
+      binList.push(0);
+    }
+  }
+
+  let binNum = binList.join("");
+  return binNum;
+}
